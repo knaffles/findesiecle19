@@ -1,0 +1,13 @@
+.padded {
+  @include breakpoint($medium) {
+    padding: 50px 0;
+  }
+  padding: 30px 0;
+}
+
+.padded-xtra {
+  @include breakpoint($medium) {
+    padding: 75px 0;
+  }
+  padding: 40px 0;  
+}

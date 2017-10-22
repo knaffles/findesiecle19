@@ -1,0 +1,16 @@
+$nav-height: 5rem;
+
+$micro: 321px;
+$small: 481px;
+$medium: 769px;
+$large: 1025px;
+
+$micro-only: max-width ($micro - 1);
+$small-only: max-width ($small - 1);
+
+$serif: 'Gentium Basic', serif;
+$sans-serif: 'Cabin', sans-serif;
+
+$whiteish: darken(#fff, 20%);
+$grayish: rgba(0, 0, 0, 0.7);
+$blueish: #415f93;

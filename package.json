@@ -1,0 +1,21 @@
+{
+  "name": "findesiecle19",
+  "version": "1.0.0",
+  "description": "Fin de Siecle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-concat": "^2.6.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-sass": "^3.1.0",
+    "node-normalize-scss": "^3.0.0"
+  }
+}
