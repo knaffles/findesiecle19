@@ -1,5 +1,14 @@
 //TODO - convert nav-height to rem-height mixin
-@import url('https://fonts.googleapis.com/css?family=Fascinate+Inline');
+
+@font-face {
+  font-family: 'Bing';
+  src: url('./fonts/2E8E69_0_0.eot');
+  src: url('./fonts/2E8E69_0_0.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/2E8E69_0_0.woff2') format('woff2'),
+  url('./fonts/2E8E69_0_0.woff') format('woff'),
+  url('./fonts/2E8E69_0_0.ttf') format('truetype');
+}
+
 * {
   box-sizing: border-box;
 }
@@ -13,7 +22,7 @@ html {
 }
 
 body {
-  color: $grayish;
+  color: $greyish;
   font-family: $sans-serif;
 }
 
@@ -49,22 +58,33 @@ h2 {
   }
   font-size: 1.2rem;
 }
+
+.bumpit-baby {
+  margin-left: -10px;
+}
+
+.red {
+  color: red;
+}
+
+.lh16 {
+  line-height: 1.5;
+}
 // End typography
 //------------------------------------------------------------------------------
 
 header {
-  background-color: black;
-  opacity: 0.9;
-  position: fixed;
+  border-bottom: 1px solid $greyish;
   top: 0;
-  height: $nav-height;
-  overflow: hidden;
   width: 100%;
   z-index: 10;
+  padding-bottom: 1rem;
+
   .row {
     height: 100%;
     position: relative;
   }
+
   &.show-title {
     .header-title {
       // transform: translateY(-50%);
@@ -72,25 +92,19 @@ header {
   }
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .header-title {
-  color: $whiteish;
-  font-family: $serif;
-  font-size: 2.5rem;
-  line-height: 5rem;
   @include breakpoint(max-width 360px) {
     font-size: 2rem;
   }
-  // text-transform: uppercase;
-  position: absolute;
-  left: 1.25rem;
-  // top: 50%;
-  // transform: translateY(150%);
-  // transition: transform 200ms ease-in;
-  span {
-    @include breakpoint($small-only) {
-      display: none;
-    }
-  }
+  color: $greyish;
+  font-family: $bing;
+  font-size: 5.5rem;
+  line-height: 1;
 }
 
 .hero-container {
@@ -114,20 +128,22 @@ header {
 }
 
 #main-nav {
-  float: right;
-  height: $nav-height;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
+  // height: $nav-height;
+
+  ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    list-style: none;
+  }
 
   li {
     float: left;
     height: 100%;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+
     a {
-      color: $whiteish;
+      color: $greyish;
       text-decoration: none;
       display: block;
       @include breakpoint(max-width 550px) {
@@ -141,9 +157,9 @@ header {
         font-size: .9rem;
       }
       padding: 2rem;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
+      // position: relative;
+      // top: 50%;
+      // transform: translateY(-50%);
     }
     @include breakpoint($small) {
       &:last-child {
@@ -153,10 +169,6 @@ header {
       }
     }
   }
-}
-
-main {
-  margin-top: $nav-height;
 }
 
 .row {
@@ -182,7 +194,7 @@ section .row {
 
 .section-title {
   @extend .subhero;
-  color: $grayish;
+  color: $greyish;
   margin: 0 auto;
 }
 
@@ -198,9 +210,47 @@ section .row {
 }
 
 .slick-slide {
+  @include breakpoint($medium) {
+    width: 600px;  
+  }
   transform: scale(0.75);
   transition: all 0.3s ease;
   opacity: 0.6;
+  width: 400px;
+  position: relative;
+  text-align: center;
+
+  &:hover {
+    .descr {
+      background-color: rgba(255, 255, 255, 0.7);
+      opacity: 1;
+    }
+  }
+}
+
+.descr {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  opacity: 0;
+  // top: 0;
+  left: 0;
+  transition: all 300ms ease;
+  transform: translateY(-50%);
+
+  p {
+    color: #333;
+    font-family: Helvetica, sans-serif;
+    font-size: 0.875rem;
+    max-width: 28.125rem;
+    margin: 0 auto;
+    line-height: 1.3;
+  }
 }
 
 .slick-active {
@@ -217,10 +267,10 @@ section .row {
   z-index: 1;
   width: 100px;
   height: 100%;
-  background-color: white !important;
+  // background-color: white !important;
 
   &:hover {
-    background-color: white;
+    // background-color: white;
   }
 }
 
@@ -231,10 +281,22 @@ section .row {
 }
 
 .slick-prev {
+  @include breakpoint($medium) {
+    left: 5%;
+  }
+  @include breakpoint($large) {
+    left: 15%;  
+  }
   left: 0;
 }
 
 .slick-next {
+  @include breakpoint($medium) {
+    right: 5%;
+  }
+  @include breakpoint($large) {
+    right: 15%;  
+  }
   right: 0;
 }
 
@@ -391,7 +453,7 @@ section .row {
   .row {
     padding-top: 0;
   }
-  color: $grayish;
+  color: $greyish;
   h2 {
     font-size: 3rem;
     font-weight: bold;

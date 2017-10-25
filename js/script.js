@@ -87,9 +87,10 @@ $(document).ready(function() {
 
   $('.carousel').slick({
     centerMode: true,
-    centerPadding: '60px',
+    centerPadding: '0px',
     slidesToShow: 3,
     // speed: 2000,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 768,

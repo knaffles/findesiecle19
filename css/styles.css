@@ -1,3 +1,5 @@
+@import url("//hello.myfonts.net/count/2e8e69");
+@import url("http://fonts.googleapis.com/css?family=Cabin|Gentium+Basic:400,700");
 @import url("https://fonts.googleapis.com/css?family=Anton");
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
 
@@ -857,7 +859,6 @@ img.mfp-img {
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Fascinate+Inline");
 /* line 12, node_modules/node-normalize-scss/_normalize.scss */
 html {
   line-height: 1.15;
@@ -1351,39 +1352,45 @@ template {
   }
 }
 
-/* line 3, sass/_onepage.scss */
+@font-face {
+  font-family: 'Bing';
+  src: url("./fonts/2E8E69_0_0.eot");
+  src: url("./fonts/2E8E69_0_0.eot?#iefix") format("embedded-opentype"), url("./fonts/2E8E69_0_0.woff2") format("woff2"), url("./fonts/2E8E69_0_0.woff") format("woff"), url("./fonts/2E8E69_0_0.ttf") format("truetype");
+}
+
+/* line 12, sass/_onepage.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 7, sass/_onepage.scss */
+/* line 16, sass/_onepage.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 11, sass/_onepage.scss */
+/* line 20, sass/_onepage.scss */
 html {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 15, sass/_onepage.scss */
+/* line 24, sass/_onepage.scss */
 body {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.5);
   font-family: "Cabin", sans-serif;
 }
 
-/* line 20, sass/_onepage.scss */
+/* line 29, sass/_onepage.scss */
 a {
   color: #415f93;
   text-decoration: none;
 }
 
-/* line 23, sass/_onepage.scss */
+/* line 32, sass/_onepage.scss */
 a:hover, a:focus {
   color: #22314c;
 }
 
-/* line 28, sass/_onepage.scss */
+/* line 37, sass/_onepage.scss */
 img {
   display: inline-block;
   vertical-align: middle;
@@ -1392,7 +1399,7 @@ img {
   height: auto;
 }
 
-/* line 39, sass/_onepage.scss */
+/* line 48, sass/_onepage.scss */
 h2 {
   font-family: 'Anton', sans-serif;
   font-size: 38px;
@@ -1400,61 +1407,74 @@ h2 {
   color: #4c3f37;
 }
 
-/* line 46, sass/_onepage.scss */
+/* line 55, sass/_onepage.scss */
 .text-large {
   font-size: 1.2rem;
 }
 
 @media (min-width: 481px) {
-  /* line 46, sass/_onepage.scss */
+  /* line 55, sass/_onepage.scss */
   .text-large {
     font-size: 1.6rem;
   }
 }
 
-/* line 55, sass/_onepage.scss */
-header {
-  background-color: black;
-  opacity: 0.9;
-  position: fixed;
-  top: 0;
-  height: 5rem;
-  overflow: hidden;
-  width: 100%;
-  z-index: 10;
+/* line 62, sass/_onepage.scss */
+.bumpit-baby {
+  margin-left: -10px;
 }
 
-/* line 64, sass/_onepage.scss */
+/* line 66, sass/_onepage.scss */
+.red {
+  color: red;
+}
+
+/* line 70, sass/_onepage.scss */
+.lh16 {
+  line-height: 1.5;
+}
+
+/* line 76, sass/_onepage.scss */
+header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  padding-bottom: 1rem;
+}
+
+/* line 83, sass/_onepage.scss */
 header .row {
   height: 100%;
   position: relative;
 }
 
-/* line 75, sass/_onepage.scss */
+/* line 95, sass/_onepage.scss */
+.header-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 100, sass/_onepage.scss */
 .header-title {
-  color: #cccccc;
-  font-family: "Gentium Basic", serif;
-  font-size: 2.5rem;
-  line-height: 5rem;
-  position: absolute;
-  left: 1.25rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Bing", serif;
+  font-size: 5.5rem;
+  line-height: 1;
 }
 
 @media (max-width: 360px) {
-  /* line 75, sass/_onepage.scss */
+  /* line 100, sass/_onepage.scss */
   .header-title {
     font-size: 2rem;
   }
 }
 
-@media (max-width: 480px) {
-  /* line 89, sass/_onepage.scss */
-  .header-title span {
-    display: none;
-  }
-}
-
-/* line 96, sass/_onepage.scss */
+/* line 110, sass/_onepage.scss */
 .hero-container {
   position: relative;
   top: 50%;
@@ -1462,7 +1482,7 @@ header .row {
           transform: translateY(-50%);
 }
 
-/* line 102, sass/_onepage.scss */
+/* line 116, sass/_onepage.scss */
 .hero {
   font-family: "Gentium Basic", serif;
   font-size: 3.25rem;
@@ -1470,7 +1490,7 @@ header .row {
   margin-bottom: 1rem;
 }
 
-/* line 109, sass/_onepage.scss */
+/* line 123, sass/_onepage.scss */
 .subhero, .section-title {
   text-transform: uppercase;
   font-size: 2rem;
@@ -1478,51 +1498,45 @@ header .row {
   text-align: center;
 }
 
-/* line 116, sass/_onepage.scss */
-#main-nav {
-  float: right;
-  height: 5rem;
+/* line 133, sass/_onepage.scss */
+#main-nav ul {
+  display: block;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
+  list-style: none;
 }
 
-/* line 123, sass/_onepage.scss */
+/* line 141, sass/_onepage.scss */
 #main-nav li {
   float: left;
   height: 100%;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
 }
 
-/* line 129, sass/_onepage.scss */
+/* line 145, sass/_onepage.scss */
 #main-nav li a {
-  color: #cccccc;
+  color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
   display: block;
   padding: 2rem;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 @media (max-width: 550px) {
-  /* line 129, sass/_onepage.scss */
+  /* line 145, sass/_onepage.scss */
   #main-nav li a {
     padding: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  /* line 129, sass/_onepage.scss */
+  /* line 145, sass/_onepage.scss */
   #main-nav li a {
     padding: .75rem;
   }
 }
 
 @media (max-width: 360px) {
-  /* line 129, sass/_onepage.scss */
+  /* line 145, sass/_onepage.scss */
   #main-nav li a {
     padding: .5rem;
     font-size: .9rem;
@@ -1530,18 +1544,13 @@ header .row {
 }
 
 @media (min-width: 481px) {
-  /* line 150, sass/_onepage.scss */
+  /* line 166, sass/_onepage.scss */
   #main-nav li:last-child a {
     padding-right: 0;
   }
 }
 
-/* line 158, sass/_onepage.scss */
-main {
-  margin-top: 5rem;
-}
-
-/* line 162, sass/_onepage.scss */
+/* line 174, sass/_onepage.scss */
 .row {
   max-width: 1200px;
   margin: 0 auto;
@@ -1549,12 +1558,12 @@ main {
   box-sizing: border-box;
 }
 
-/* line 169, sass/_onepage.scss */
+/* line 181, sass/_onepage.scss */
 section {
   clear: both;
 }
 
-/* line 174, sass/_onepage.scss */
+/* line 186, sass/_onepage.scss */
 section .row hr {
   clear: both;
   border: none;
@@ -1563,99 +1572,167 @@ section .row hr {
   margin: 0 0 5rem;
 }
 
-/* line 183, sass/_onepage.scss */
+/* line 195, sass/_onepage.scss */
 .section-title {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.5);
   margin: 0 auto;
 }
 
-/* line 200, sass/_onepage.scss */
+/* line 212, sass/_onepage.scss */
 .slick-slide {
   -webkit-transform: scale(0.75);
           transform: scale(0.75);
   transition: all 0.3s ease;
   opacity: 0.6;
+  width: 400px;
+  position: relative;
+  text-align: center;
 }
 
-/* line 206, sass/_onepage.scss */
+@media (min-width: 769px) {
+  /* line 212, sass/_onepage.scss */
+  .slick-slide {
+    width: 600px;
+  }
+}
+
+/* line 224, sass/_onepage.scss */
+.slick-slide:hover .descr {
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 1;
+}
+
+/* line 231, sass/_onepage.scss */
+.descr {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  opacity: 0;
+  left: 0;
+  transition: all 300ms ease;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/* line 246, sass/_onepage.scss */
+.descr p {
+  color: #333;
+  font-family: Helvetica, sans-serif;
+  font-size: 0.875rem;
+  max-width: 28.125rem;
+  margin: 0 auto;
+  line-height: 1.3;
+}
+
+/* line 256, sass/_onepage.scss */
 .slick-active {
   opacity: 0.6;
 }
 
-/* line 210, sass/_onepage.scss */
+/* line 260, sass/_onepage.scss */
 .slick-slide.slick-center {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-/* line 215, sass/_onepage.scss */
+/* line 265, sass/_onepage.scss */
 .slick-prev,
 .slick-next {
   z-index: 1;
   width: 100px;
   height: 100%;
-  background-color: white !important;
 }
 
-/* line 222, sass/_onepage.scss */
-.slick-prev:hover,
-.slick-next:hover {
-  background-color: white;
-}
-
-/* line 227, sass/_onepage.scss */
+/* line 277, sass/_onepage.scss */
 .slick-prev:before,
 .slick-next:before {
   color: black;
   font-size: 30px;
 }
 
-/* line 233, sass/_onepage.scss */
+/* line 283, sass/_onepage.scss */
 .slick-prev {
   left: 0;
 }
 
-/* line 237, sass/_onepage.scss */
+@media (min-width: 769px) {
+  /* line 283, sass/_onepage.scss */
+  .slick-prev {
+    left: 5%;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* line 283, sass/_onepage.scss */
+  .slick-prev {
+    left: 15%;
+  }
+}
+
+/* line 293, sass/_onepage.scss */
 .slick-next {
   right: 0;
 }
 
+@media (min-width: 769px) {
+  /* line 293, sass/_onepage.scss */
+  .slick-next {
+    right: 5%;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* line 293, sass/_onepage.scss */
+  .slick-next {
+    right: 15%;
+  }
+}
+
 @media (min-width: 481px) {
-  /* line 244, sass/_onepage.scss */
+  /* line 306, sass/_onepage.scss */
   .two-col {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
-  /* line 248, sass/_onepage.scss */
+  /* line 310, sass/_onepage.scss */
   .two-col > div {
     width: 50%;
   }
 }
 
 @media (min-width: 481px) {
-  /* line 255, sass/_onepage.scss */
+  /* line 317, sass/_onepage.scss */
   .two-col__left {
     padding-right: 25px;
   }
 }
 
-/* line 261, sass/_onepage.scss */
+/* line 323, sass/_onepage.scss */
 .two-col__right {
   padding-left: 10px;
   padding-top: 50px;
 }
 
 @media (min-width: 481px) {
-  /* line 261, sass/_onepage.scss */
+  /* line 323, sass/_onepage.scss */
   .two-col__right {
     padding-left: 25px;
   }
 }
 
 @media (min-width: 481px) {
-  /* line 275, sass/_onepage.scss */
+  /* line 337, sass/_onepage.scss */
   .boxes {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1666,39 +1743,39 @@ section .row hr {
 }
 
 @media (min-width: 481px) {
-  /* line 282, sass/_onepage.scss */
+  /* line 344, sass/_onepage.scss */
   .boxes > div {
     width: 33%;
     padding: 0 20px;
   }
 }
 
-/* line 288, sass/_onepage.scss */
+/* line 350, sass/_onepage.scss */
 .boxes > div + div {
   margin-top: 20px;
 }
 
 @media (min-width: 481px) {
-  /* line 288, sass/_onepage.scss */
+  /* line 350, sass/_onepage.scss */
   .boxes > div + div {
     margin-top: 0;
   }
 }
 
-/* line 297, sass/_onepage.scss */
+/* line 359, sass/_onepage.scss */
 .box__container {
   border: 1px solid rgba(38, 34, 38, 0.23);
   box-shadow: 2px 2px 2px 0px rgba(38, 34, 38, 0.23);
   padding: 20px;
 }
 
-/* line 303, sass/_onepage.scss */
+/* line 365, sass/_onepage.scss */
 .box__descr {
   font-size: 1.2em;
   text-align: center;
 }
 
-/* line 314, sass/_onepage.scss */
+/* line 376, sass/_onepage.scss */
 #work .work-lead {
   font-size: 1.5rem;
   line-height: 1.3;
@@ -1707,7 +1784,7 @@ section .row hr {
   text-align: center;
 }
 
-/* line 322, sass/_onepage.scss */
+/* line 384, sass/_onepage.scss */
 #work img.center {
   display: block;
   max-width: 600px;
@@ -1715,14 +1792,14 @@ section .row hr {
 }
 
 @media (max-width: 480px) {
-  /* line 321, sass/_onepage.scss */
+  /* line 383, sass/_onepage.scss */
   #work img {
     margin-bottom: 1rem;
   }
 }
 
 @media (min-width: 481px) {
-  /* line 331, sass/_onepage.scss */
+  /* line 393, sass/_onepage.scss */
   #work img.right {
     width: 55%;
     padding: 0 1rem 0 0;
@@ -1730,7 +1807,7 @@ section .row hr {
     -webkit-transform: perspective(700px) rotateY(25deg) translateX(15px);
             transform: perspective(700px) rotateY(25deg) translateX(15px);
   }
-  /* line 337, sass/_onepage.scss */
+  /* line 399, sass/_onepage.scss */
   #work img.left {
     width: 55%;
     float: right;
@@ -1740,20 +1817,20 @@ section .row hr {
   }
 }
 
-/* line 347, sass/_onepage.scss */
+/* line 409, sass/_onepage.scss */
 .sample {
   background: url(../images/sample-lg.jpg) no-repeat center center;
   background-size: cover;
 }
 
 @media (min-width: 481px) {
-  /* line 354, sass/_onepage.scss */
+  /* line 416, sass/_onepage.scss */
   .work-blurb.right {
     width: 45%;
     padding: 0 0 0 1rem;
     float: left;
   }
-  /* line 359, sass/_onepage.scss */
+  /* line 421, sass/_onepage.scss */
   .work-blurb.left {
     width: 45%;
     float: right;
@@ -1761,7 +1838,7 @@ section .row hr {
   }
 }
 
-/* line 365, sass/_onepage.scss */
+/* line 427, sass/_onepage.scss */
 .work-blurb h2 {
   font-family: "Gentium Basic", serif;
   font-size: 2rem;
@@ -1769,12 +1846,12 @@ section .row hr {
   margin-bottom: 1rem;
 }
 
-/* line 371, sass/_onepage.scss */
+/* line 433, sass/_onepage.scss */
 .work-blurb p {
   line-height: 1.4;
 }
 
-/* line 376, sass/_onepage.scss */
+/* line 438, sass/_onepage.scss */
 .sample-caption {
   max-width: 600px;
   margin: 1rem auto 6rem auto;
@@ -1783,24 +1860,24 @@ section .row hr {
   text-align: center;
 }
 
-/* line 384, sass/_onepage.scss */
+/* line 446, sass/_onepage.scss */
 .pipe {
   font-size: .8rem;
   position: relative;
   top: -1px;
 }
 
-/* line 390, sass/_onepage.scss */
+/* line 452, sass/_onepage.scss */
 #contact {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 391, sass/_onepage.scss */
+/* line 453, sass/_onepage.scss */
 #contact .row {
   padding-top: 0;
 }
 
-/* line 395, sass/_onepage.scss */
+/* line 457, sass/_onepage.scss */
 #contact h2 {
   font-size: 3rem;
   font-weight: bold;
@@ -1809,7 +1886,7 @@ section .row hr {
   text-align: center;
 }
 
-/* line 402, sass/_onepage.scss */
+/* line 464, sass/_onepage.scss */
 #contact input[type="text"],
 #contact textarea {
   display: block;
@@ -1819,12 +1896,12 @@ section .row hr {
   padding: .5rem;
 }
 
-/* line 410, sass/_onepage.scss */
+/* line 472, sass/_onepage.scss */
 #contact textarea {
   height: 6rem;
 }
 
-/* line 413, sass/_onepage.scss */
+/* line 475, sass/_onepage.scss */
 #contact input[type="submit"] {
   background-color: cornflowerblue;
   color: white;
@@ -1840,7 +1917,7 @@ section .row hr {
   margin: 0 auto;
 }
 
-/* line 427, sass/_onepage.scss */
+/* line 489, sass/_onepage.scss */
 #contact iframe {
   height: 650px;
 }
