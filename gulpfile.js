@@ -54,11 +54,30 @@ gulp.task('styles', function() {
     .pipe(livereload());
 });
 
+gulp.task('wufoo', function() {
+  gulp.src('./sass/wufoo.scss')
+    .pipe(sass({
+      outputStyle: 'expanded',
+      sourceComments: true
+    }))
+    // Catch any SCSS errors and prevent them from crashing gulp
+    .on('error', function (error) {
+      console.error(error);
+      this.emit('end');
+    })
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions', 'iOS 7', 'ie 11']
+    }))
+    .pipe(concat('wufoo.css'))
+    .pipe(gulp.dest('./css'))
+    .pipe(livereload());
+});
+
 gulp.task('watch', function() {
   if (autoReload) {
     livereload.listen();
   }
-  gulp.watch('./sass/**/*.scss', ['styles']);
+  gulp.watch('./sass/**/*.scss', ['styles', 'wufoo']);
 });
 
-gulp.task('default', ['styles']);
+gulp.task('default', ['styles', 'wufoo']);

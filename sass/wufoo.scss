@@ -1,8 +1,8 @@
-$grayish: rgba(0, 0, 0, 0.5);
+$greyish: rgba(0, 0, 0, 0.5);
 
 .wufoo {
-  font-family: 'Roboto', sans-serif;
-  color: $grayish;
+  font-family: Helvetica, sans-serif;
+  color: $greyish;
   -webkit-font-smoothing: antialiased;
   * {
     -moz-box-sizing: border-box;
@@ -11,19 +11,28 @@ $grayish: rgba(0, 0, 0, 0.5);
   }
   li {
     padding: 0;
+
+    &.focused {
+      background-color: transparent;
+    }
   }
+
+  .info {
+    border: none;
+  }
+
   .info h2 {
-    color: $grayish;
+    color: $greyish;
     text-transform: uppercase;
     font-size: 2rem;
-    letter-spacing: 2px;
+    letter-spacing: 0;
     text-align: center;
   }
   label.desc {
-    color: $grayish;
+    color: $greyish;
     display: block;
     width: 100%;
-    max-width: 300px;
+    max-width: 500px;
     margin: 0 auto;
   }
   input[type="text"],
@@ -31,10 +40,11 @@ $grayish: rgba(0, 0, 0, 0.5);
   textarea,
   textarea.textarea {
     background: none;
-    border: 1px solid $grayish;
+    border: 1px solid $greyish;
+    border-radius: 2px;
     display: block;
     width: 100%;
-    max-width: 300px;
+    max-width: 500px;
     min-width: 0;
     margin: 0 auto 1rem auto;
     padding: .5rem;
@@ -43,11 +53,11 @@ $grayish: rgba(0, 0, 0, 0.5);
     height: 6rem;
   }
   input[type="submit"] {
-    background-color: $grayish;
+    background-color: $greyish;
     color: white;
     font-size: 1rem;
     font-weight: 700;
-    font-family: 'Roboto', sans-serif;
+    font-family: Helvetica, sans-serif;
     text-transform: uppercase;
     display: block;
     border: none;
@@ -71,7 +81,7 @@ $error: #9D3434 !important;
 #errorLi {
   -webkit-border-radius: 0;
   border-radius: 0;
-  max-width: 300px;
+  max-width: 500px;
   border-color: $error;
 }
 
@@ -91,7 +101,7 @@ form {
     color: $error;
   }
   li.error {
-    max-width: 300px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 20px;
     .desc {

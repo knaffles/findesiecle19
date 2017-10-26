@@ -75,13 +75,17 @@ h2 {
 
 header {
   background-color: white;
-  border-bottom: 1px solid $greyish;
+  border-bottom: 1px solid $border;
   height: $nav-height;
-  padding-bottom: 1rem;
+  margin-bottom: 4em;
   position: relative;
   top: 0;
   width: 100%;
   z-index: 10;
+
+  .front & {
+    margin-bottom: 2.5rem;
+  }
 
   .row {
     height: 100%;
@@ -96,18 +100,25 @@ header {
 }
 
 .header-container {
+  align-items: center;
   display: flex;
+  height: 100%;
   justify-content: space-between;
 }
 
 .header-title {
   @include breakpoint(max-width 360px) {
-    font-size: 2rem;
+    font-size: 3rem;
   }
-  color: $greyish;
   font-family: $bing;
   font-size: 5.5rem;
   line-height: 1;
+  position: relative;
+  top: -0.375rem;
+
+  a, a:hover, a:focus {
+    color: $lightgrey;
+  }
 }
 
 .hero-container {
@@ -116,12 +127,12 @@ header {
   transform: translateY(-50%);
 }
 
-.hero {
-  font-family: $serif;
-  font-size: 3.25rem;
-  text-align: center;
-  margin-bottom: 1rem;
-}
+// .hero {
+//   font-family: $serif;
+//   font-size: 3.25rem;
+//   text-align: center;
+//   margin-bottom: 1rem;
+// }
 
 .subhero {
   text-transform: uppercase;
@@ -137,7 +148,6 @@ header {
     display: block;
     margin: 0;
     padding: 0;
-    text-transform: uppercase;
     list-style: none;
   }
 
@@ -146,9 +156,6 @@ header {
     height: 100%;
 
     a {
-      color: $greyish;
-      text-decoration: none;
-      display: block;
       @include breakpoint(max-width 550px) {
         padding: 1rem;
       }
@@ -159,10 +166,13 @@ header {
         padding: .5rem;
         font-size: .9rem;
       }
-      padding: 2rem;
-      // position: relative;
-      // top: 50%;
-      // transform: translateY(-50%);
+      color: $darkgrey;
+      display: block;
+      font-size: 1.375rem;
+      font-weight: lighter;
+      letter-spacing: -1px;
+      padding: 2.25rem 2rem 0;
+      text-decoration: none;
     }
     @include breakpoint($small) {
       &:last-child {
@@ -202,18 +212,21 @@ section .row {
 }
 
 #start {
-  height: calc(100vh - #{$nav-height});
+  height: calc(100vh - #{$nav-height} - 2.5rem);
   position: relative;
 }
 
 .slick-slide {
+  @include breakpoint($small) {
+    width: 400px;
+  }
   @include breakpoint($medium) {
     width: 600px;  
   }
   transform: scale(0.75);
   transition: all 0.3s ease;
   opacity: 0.6;
-  width: 400px;
+  width: 200px;
   position: relative;
   text-align: center;
 
@@ -222,6 +235,11 @@ section .row {
       background-color: rgba(255, 255, 255, 0.7);
       opacity: 1;
     }
+  }
+
+  img {
+    display: inline-block;
+    max-height: calc(100vh - #{$nav-height} - 2.5rem); // 2.5rem is header bottom margin
   }
 }
 
@@ -248,7 +266,7 @@ section .row {
 
   p {
     color: #333;
-    font-family: Helvetica, sans-serif;
+    font-family: $sans-serif;
     font-size: 0.875rem;
     max-width: 28.125rem;
     margin: 0 auto;
@@ -274,16 +292,31 @@ section .row {
 
 .slick-prev:before,
 .slick-next:before {
-  color: black;
-  font-size: 30px;
+  background-repeat: no-repeat;
+  content: '';
+  display: block;
+  height: 86px;
+  margin: 0 auto;
+  width: 46px;
+}
+
+.slick-prev:before {
+  background-image: url('../images/left.svg');
+}
+
+.slick-next:before {
+  background-image: url('../images/right.svg');
 }
 
 .slick-prev {
   @include breakpoint($medium) {
     left: 5%;
   }
+  @include breakpoint($med-lg) {
+    left: 10%;
+  }
   @include breakpoint($large) {
-    left: 15%;  
+    left: 20%;  
   }
   left: 0;
 }
@@ -292,8 +325,11 @@ section .row {
   @include breakpoint($medium) {
     right: 5%;
   }
+  @include breakpoint($med-lg) {
+    right: 10%;
+  }
   @include breakpoint($large) {
-    right: 15%;  
+    right: 20%;  
   }
   right: 0;
 }
@@ -409,29 +445,29 @@ section .row {
   background-size: cover;
 }
 
-.work-blurb {
-  @include breakpoint($small) {
-    &.right {
-      width: 45%;
-      padding: 0 0 0 1rem;
-      float: left;
-    }
-    &.left {
-      width: 45%;
-      float: right;
-      padding: 0 1rem 0 0;
-    }
-  }
-  h2 {
-    font-family: $serif;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  p {
-    line-height: 1.4;
-  }
-}
+// .work-blurb {
+//   @include breakpoint($small) {
+//     &.right {
+//       width: 45%;
+//       padding: 0 0 0 1rem;
+//       float: left;
+//     }
+//     &.left {
+//       width: 45%;
+//       float: right;
+//       padding: 0 1rem 0 0;
+//     }
+//   }
+//   h2 {
+//     font-family: $serif;
+//     font-size: 2rem;
+//     font-weight: 700;
+//     margin-bottom: 1rem;
+//   }
+//   p {
+//     line-height: 1.4;
+//   }
+// }
 
 .sample-caption {
   max-width: 600px;

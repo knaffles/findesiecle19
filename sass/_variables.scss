@@ -3,15 +3,18 @@ $nav-height: 6.5625rem;
 $micro: 321px;
 $small: 481px;
 $medium: 769px;
+$med-lg: 900px;
 $large: 1025px;
 
 $micro-only: max-width ($micro - 1);
 $small-only: max-width ($small - 1);
 
-$serif: 'Gentium Basic', serif;
-$sans-serif: 'Cabin', sans-serif;
+$sans-serif: Helvetica, sans-serif;
 $bing: 'Bing', serif;
 
 $whiteish: darken(#fff, 20%);
+$lightgrey: #bfc0bf;
+$darkgrey: #1a1919;
 $greyish: rgba(0, 0, 0, 0.5);
 $blueish: #415f93;
+$border: $lightgrey;
