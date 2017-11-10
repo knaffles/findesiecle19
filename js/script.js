@@ -84,6 +84,11 @@ $(document).ready(function() {
 //     flexslider.vars.maxItems = gridSize;
 //   });
 
+  $('.carousel').on('init', function(event, slick) {
+      console.log('init');
+    var currentDescr = '<div class="carousel-descr">' + $(slick.$slides.get(0)).find('.descr').html() + '</div>';
+    $(currentDescr).appendTo('#start');
+  });
 
   $('.carousel').slick({
     centerMode: true,
@@ -112,5 +117,27 @@ $(document).ready(function() {
       }
     ]
   });
+
+  // After slide change
+
+  if ('ontouchstart' in document.documentElement) {
+    $('body').addClass('has-touch');
+  }
+
+
+  $('.carousel').on('afterChange', function(event, slick, currentSlide) {
+    var currentDescr = $(slick.$slides.get(currentSlide)).find('.descr').html();
+
+    if (typeof currentDescr === 'undefined') { currentDescr = '<p>No description provided.</p>' }
+
+    currentDescr = '<div class="carousel-descr">' + currentDescr + '</div>'
+
+    $('.carousel-descr').remove();
+    $(currentDescr).appendTo('#start');
+  });
+
+  $('#show-descr').on('click', function(e) {
+    $('.carousel').toggleClass('show-descr');
+  })
 
 });
