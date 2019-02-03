@@ -138,6 +138,12 @@ $(document).ready(function() {
 
   $('#show-descr').on('click', function(e) {
     $('.carousel').toggleClass('show-descr');
+
+    if ($('.carousel').hasClass('show-descr')) {
+      $(this).text('Hide descriptions');
+    } else {
+      $(this).text('Show descriptions');
+    }
   })
 
 });
