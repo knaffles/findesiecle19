@@ -200,6 +200,10 @@ section {
   clear: both;
 }
 
+section + section {
+  margin-top: 3rem;
+}
+
 section .row {
   hr {
     clear: both;
@@ -574,10 +578,10 @@ section .row {
   }
   color: $greyish;
   h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    // font-size: 3rem;
+    // font-weight: bold;
+    // letter-spacing: 2px;
+    // text-transform: uppercase;
     text-align: center;
   }
   input[type="text"],

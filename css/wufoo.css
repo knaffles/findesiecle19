@@ -1,31 +1,36 @@
-/* line 3, sass/wufoo.scss */
+/* line 9, sass/wufoo.scss */
 .wufoo {
   font-family: Helvetica, sans-serif;
   color: rgba(0, 0, 0, 0.5);
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 7, sass/wufoo.scss */
+/* line 13, sass/wufoo.scss */
 .wufoo * {
   box-sizing: border-box;
 }
 
-/* line 12, sass/wufoo.scss */
+/* line 19, sass/wufoo.scss */
+.wufoo h2 {
+  display: none;
+}
+
+/* line 23, sass/wufoo.scss */
 .wufoo li {
   padding: 0;
 }
 
-/* line 15, sass/wufoo.scss */
+/* line 26, sass/wufoo.scss */
 .wufoo li.focused {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
-/* line 20, sass/wufoo.scss */
+/* line 31, sass/wufoo.scss */
 .wufoo .info {
   border: none;
 }
 
-/* line 24, sass/wufoo.scss */
+/* line 35, sass/wufoo.scss */
 .wufoo .info h2 {
   color: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
@@ -34,7 +39,7 @@
   text-align: center;
 }
 
-/* line 31, sass/wufoo.scss */
+/* line 42, sass/wufoo.scss */
 .wufoo label.desc {
   color: rgba(0, 0, 0, 0.5);
   display: block;
@@ -43,13 +48,13 @@
   margin: 0 auto;
 }
 
-/* line 38, sass/wufoo.scss */
+/* line 49, sass/wufoo.scss */
 .wufoo input[type="text"],
 .wufoo input[type="email"],
 .wufoo textarea,
 .wufoo textarea.textarea {
   background: none;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid #bfc0bf;
   border-radius: 2px;
   display: block;
   width: 100%;
@@ -59,12 +64,12 @@
   padding: .5rem;
 }
 
-/* line 52, sass/wufoo.scss */
+/* line 63, sass/wufoo.scss */
 .wufoo textarea {
   height: 6rem;
 }
 
-/* line 55, sass/wufoo.scss */
+/* line 66, sass/wufoo.scss */
 .wufoo input[type="submit"] {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -83,42 +88,42 @@
   -moz-appearance: none;
 }
 
-/* line 73, sass/wufoo.scss */
+/* line 84, sass/wufoo.scss */
 .wufoo .buttons a {
   float: right;
 }
 
-/* line 81, sass/wufoo.scss */
+/* line 92, sass/wufoo.scss */
 #errorLi {
   border-radius: 0;
   max-width: 500px;
   border-color: #9D3434 !important;
 }
 
-/* line 89, sass/wufoo.scss */
+/* line 100, sass/wufoo.scss */
 #errorMsg b {
   color: #9D3434 !important;
 }
 
-/* line 94, sass/wufoo.scss */
+/* line 105, sass/wufoo.scss */
 #errorMsgLbl {
   color: #9D3434 !important;
   margin-bottom: 10px;
 }
 
-/* line 100, sass/wufoo.scss */
+/* line 111, sass/wufoo.scss */
 form p.error {
   color: #9D3434 !important;
 }
 
-/* line 103, sass/wufoo.scss */
+/* line 114, sass/wufoo.scss */
 form li.error {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* line 107, sass/wufoo.scss */
+/* line 118, sass/wufoo.scss */
 form li.error .desc {
   color: #9D3434 !important;
 }

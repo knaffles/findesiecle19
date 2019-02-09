@@ -1,3 +1,9 @@
+$whiteish: darken(#fff, 20%);
+$lightgrey: #bfc0bf;
+$darkgrey: #1a1919;
+$greyish: rgba(0, 0, 0, 0.5);
+$blueish: #415f93;
+$border: $lightgrey;
 $greyish: rgba(0, 0, 0, 0.5);
 
 .wufoo {
@@ -9,11 +15,16 @@ $greyish: rgba(0, 0, 0, 0.5);
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
+
+  h2 {
+    display: none;
+  }
+  
   li {
     padding: 0;
 
     &.focused {
-      background-color: transparent;
+      background-color: transparent !important;
     }
   }
 
@@ -40,7 +51,7 @@ $greyish: rgba(0, 0, 0, 0.5);
   textarea,
   textarea.textarea {
     background: none;
-    border: 1px solid $greyish;
+    border: 1px solid $border;
     border-radius: 2px;
     display: block;
     width: 100%;
