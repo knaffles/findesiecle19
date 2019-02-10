@@ -658,7 +658,8 @@ img.mfp-img {
 /* Slider */
 /* line 3, css/slick-theme.css */
 .slick-loading .slick-list {
-  background: #fff url("./ajax-loader.gif") center center no-repeat;
+  /*background: #fff url('./ajax-loader.gif') center center no-repeat;*/
+  background: #fff;
 }
 
 /* Icons */
@@ -671,7 +672,7 @@ img.mfp-img {
 }
 
 /* Arrows */
-/* line 19, css/slick-theme.css */
+/* line 20, css/slick-theme.css */
 .slick-prev,
 .slick-next {
   font-size: 0;
@@ -691,7 +692,7 @@ img.mfp-img {
   background: transparent;
 }
 
-/* line 44, css/slick-theme.css */
+/* line 45, css/slick-theme.css */
 .slick-prev:hover,
 .slick-prev:focus,
 .slick-next:hover,
@@ -701,7 +702,7 @@ img.mfp-img {
   background: transparent;
 }
 
-/* line 53, css/slick-theme.css */
+/* line 54, css/slick-theme.css */
 .slick-prev:hover:before,
 .slick-prev:focus:before,
 .slick-next:hover:before,
@@ -709,13 +710,13 @@ img.mfp-img {
   opacity: 1;
 }
 
-/* line 60, css/slick-theme.css */
+/* line 61, css/slick-theme.css */
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before {
   opacity: .25;
 }
 
-/* line 66, css/slick-theme.css */
+/* line 67, css/slick-theme.css */
 .slick-prev:before,
 .slick-next:before {
   font-family: 'slick';
@@ -727,55 +728,55 @@ img.mfp-img {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 80, css/slick-theme.css */
+/* line 81, css/slick-theme.css */
 .slick-prev {
   left: -25px;
 }
 
-/* line 84, css/slick-theme.css */
+/* line 85, css/slick-theme.css */
 [dir='rtl'] .slick-prev {
   right: -25px;
   left: auto;
 }
 
-/* line 89, css/slick-theme.css */
+/* line 90, css/slick-theme.css */
 .slick-prev:before {
   content: '←';
 }
 
-/* line 93, css/slick-theme.css */
+/* line 94, css/slick-theme.css */
 [dir='rtl'] .slick-prev:before {
   content: '→';
 }
 
-/* line 98, css/slick-theme.css */
+/* line 99, css/slick-theme.css */
 .slick-next {
   right: -25px;
 }
 
-/* line 102, css/slick-theme.css */
+/* line 103, css/slick-theme.css */
 [dir='rtl'] .slick-next {
   right: auto;
   left: -25px;
 }
 
-/* line 107, css/slick-theme.css */
+/* line 108, css/slick-theme.css */
 .slick-next:before {
   content: '→';
 }
 
-/* line 111, css/slick-theme.css */
+/* line 112, css/slick-theme.css */
 [dir='rtl'] .slick-next:before {
   content: '←';
 }
 
 /* Dots */
-/* line 117, css/slick-theme.css */
+/* line 118, css/slick-theme.css */
 .slick-dotted.slick-slider {
   margin-bottom: 30px;
 }
 
-/* line 122, css/slick-theme.css */
+/* line 123, css/slick-theme.css */
 .slick-dots {
   position: absolute;
   bottom: -25px;
@@ -787,7 +788,7 @@ img.mfp-img {
   text-align: center;
 }
 
-/* line 137, css/slick-theme.css */
+/* line 138, css/slick-theme.css */
 .slick-dots li {
   position: relative;
   display: inline-block;
@@ -798,7 +799,7 @@ img.mfp-img {
   cursor: pointer;
 }
 
-/* line 150, css/slick-theme.css */
+/* line 151, css/slick-theme.css */
 .slick-dots li button {
   font-size: 0;
   line-height: 0;
@@ -813,19 +814,19 @@ img.mfp-img {
   background: transparent;
 }
 
-/* line 168, css/slick-theme.css */
+/* line 169, css/slick-theme.css */
 .slick-dots li button:hover,
 .slick-dots li button:focus {
   outline: none;
 }
 
-/* line 173, css/slick-theme.css */
+/* line 174, css/slick-theme.css */
 .slick-dots li button:hover:before,
 .slick-dots li button:focus:before {
   opacity: 1;
 }
 
-/* line 178, css/slick-theme.css */
+/* line 179, css/slick-theme.css */
 .slick-dots li button:before {
   font-family: 'slick';
   font-size: 6px;
@@ -843,7 +844,7 @@ img.mfp-img {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 200, css/slick-theme.css */
+/* line 201, css/slick-theme.css */
 .slick-dots li.slick-active button:before {
   opacity: .75;
   color: black;
@@ -1407,18 +1408,18 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
   font-family: 'Anton', sans-serif;
   font-size: 38px;
+  font-weight: normal;
   text-transform: uppercase;
   color: #4c3f37;
 }
 
-/* line 60, sass/_onepage.scss */
+/* line 61, sass/_onepage.scss */
 .text-large {
   font-size: 1.2rem;
-  font-weight: lighter;
 }
 
 @media (min-width: 481px) {
-  /* line 60, sass/_onepage.scss */
+  /* line 61, sass/_onepage.scss */
   .text-large {
     font-size: 1.6rem;
   }
